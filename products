@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- index不可 -->
+    <meta name="robots" content="noindex" />
+
+    <title>LaLaChair</title>
+    <meta name="description" content="ブルー・イエロー・モノトーンのイスのショッピングサイト【商品ページ】" />
+
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/html5reset-1.6.1.css" />
+
+    <!-- アイコン -->
+    <link rel="icon" type="image/png" href="images/favicon.ico" /> 
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
+
+  </head>
+
+<!-- body ------------------------------------------------------------------------------->
+  <body>
+    <div class="wrapper">
+      <header class="page-header">
+        <h1>
+          <a href="index.html">
+            <img
+              class="logo"
+              src="images/logo-flex.png"
+              alt="LaLaChairトップページ"
+          /></a>
+        </h1>
+
+<!-- メニュー ------------------------------------------------------------------->
+        <div class="hamburger-menu">
+          <input type="checkbox" id="menu-btn-check" />
+          <label for="menu-btn-check" class="menu-btn"><span></span></label>
+
+          <div class="menu-content">
+            <ul class="main-nav">
+              <li class="button">
+                <a href="products.html">CHAIRS<span><img class="triangle" src="images/triangle.svg" alt="三角"></span></a>
+              </li>
+              <li class="button">
+                <a href="#">NEW ARRIVALS<span><img class="triangle" src="images/triangle.svg" alt="三角"></span></a>
+              </li>
+              <li class="button">
+                <a href="#">ABOUT<span><img class="triangle" src="images/triangle.svg" alt="三角"></span></a>
+              </li>
+              <li class="button">
+                <a href="#">STORE<span><img class="triangle" src="images/triangle.svg" alt="三角"></span></a>
+                <li class="button">
+              <a href="contact.html">FAQ<span><img class="triangle" src="images/triangle.svg" alt="三角"></span></a></li>
+              <li>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+<!-- メインエリア----------------------------------------------------------------------- -->
+      <main>
+        <div id="product">
+          <div class="product-h">
+            <h2>チェア</h2>
+            <p>
+              ブルー・イエロー・モノトーンの椅子
+              ・チェア家具ならララチェアーにお任せください。こだわりの椅子やソファー、アーム付きのダイニングチェア、木製やビニールレザーの素材や価格帯も種類豊富に取り揃えております。
+            </p>
+
+            <img id="chairimg" src="images/chairimg.jpg" alt="">
+
+            <div id="category">
+              <h3>カテゴリー</h3>
+              <ul>
+                <li><a href="products.html#blue">ブルー</a></li>
+                <li><a href="products.html#yellow">イエロー</a></li>
+                <li><a href="products.html#white">ホワイト</a></li>
+                <li><a href="products.html#black">ブラック</a></li>
+              </ul>
+            </div>
+          </div>
+
+<!-- ブルー ----------------------------------------------------------------------------------->
+          <div id="blue"></div>
+          <div class="color-p box">
+            <h4>blue</h4>
+
+            <div class="grid">
+              <div class="item3">
+                <a href="#"><img src="images/chair3.jpg" alt="" /></a>
+                <ul>
+                  <li><a href="#">チェアB0041 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><span class="small">在庫 〇</span></li>
+                </ul>
+              </div>
+
+              <div class="item3">
+                <a href="#"><img src="images/chair7.jpg" alt="" /></a>
+                <ul>
+                  <li><a href="#">チェアB0058 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>8,800円 <span class="small">(税込)</span></li>
+                  <li><span class="small">在庫 〇</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+<!-- イエロー　---------------------------------------------------------------------------------->
+          <div id="yellow"></div>
+          <div class="color-p box">
+            <h5>yellow</h5>
+
+            <div class="grid">
+              <div class="item3">
+                <a href="#"><img src="images/chair4.jpg" alt="" /></a>
+                <ul>
+                  <li><a href="#">ソファーY0033</a></li>
+                  <li>39,800円 <span class="small">(税込)</span></li>
+                  <li><span class="small">在庫 〇</span></li>
+                </ul>
+              </div>
+
+              <div class="item3">
+                <a href="#"><img src="images/chair8.jpg" alt="" /></a>
+                <ul>
+                  <li><a href="#">チェアY0011 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>6,800円 <span class="small">(税込)</span></li>
+                  <li><span class="small">在庫 〇</span></li>
+                </ul>
+              </div>
+
+              <div class="item3">
+                <a href="#"><img src="images/chair14.jpg" alt="" /></a>
+                <ul>
+                  <li><a href="#">チェアY0068 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>9,800円 <span class="small">(税込)</span></li>
+                  <li><span class="small">在庫 〇</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+
+<!-- ホワイト　------------------------------------------------------------------------------------->
+          <div id="white"></div>
+          <div class="color-p box">
+            <h6>white</h6>
+
+            <div class="grid">
+
+              <div class="item3">
+                <a href="#"><img src="images/chair1.jpg" alt="" /></a>
+                <ul>
+                  <li><a href="#">チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><span class="small">在庫 〇</span>></li>
+                </ul>
+              </div>
+
+              <div class="item3">
+                <a href="#"><img src="images/chair9.jpg" alt="" /></a>
+                <ul>
+                  <li><a href="#">チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><span class="small">在庫 〇</span></li>
+                </ul>
+              </div>
+
+              <div class="item3">
+                <a href="#"><img src="images/chair10.jpg" alt="" /></a>
+                <ul>
+                  <li><a href="#">チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><span class="small">在庫 〇</span></li>
+                </ul>
+              </div>
+
+              <div class="item3">
+                <a href="#"><img src="images/chair12.jpg" alt="" /></a>
+                <ul>
+                  <li><a href="#">チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><span class="small">在庫 〇</span></li>
+                </ul>
+              </div>
+
+              <div class="item3">
+                <a href="#"><img src="images/chair13.jpg" alt="" /></a>
+                <ul>
+                  <li><a href="#">チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><span class="small">在庫 〇</span></li>
+                </ul>
+              </div>
+
+              <div class="item3">
+                <a href="#"><img src="images/chair15.jpg" alt="" /></a>
+                <ul>
+                  <li><a href="#">チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><span class="small">在庫 〇</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+
+<!-- ブラック　---------------------------------------------------------------------------------->
+          <div id="black"></div>
+          <div class="color-p box">
+            <h6>black</h6>
+
+            <div class="grid">
+  
+              <div class="item3">
+                <a href="#"><img src="images/chair5n.jpg" alt="" /></a>
+                <ul>
+                  <li><a href="#">チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><span class="small">在庫 〇</span></li>
+                </ul>
+              </div>
+  
+              <div class="item3">
+                <a href="#"><img src="images/chair6.jpg" alt="" /></a>
+                <ul>
+                  <li><a href="#">チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><span class="small">在庫 〇</span></li>
+                </ul>
+              </div>
+  
+              <div class="item3">
+                <a href="#"><img src="images/chair11.jpg" alt="" /></a>
+                <ul>
+                  <li><a href="#">チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>19,800円<span class="small">(税込)</span></li>
+                  <li><span class="small">在庫 〇</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </main>
+
+<!--  フッター　------------------------------------------------------------->
+      <footer>
+        <div class="footer">
+
+          <nav class="foot-nav">
+            <ul class="foot-list">
+              <li><a href="products.html">商品ページ</a></li>
+              <li><a href="#">新商品</a></li>
+              <li><a href="#">LaLaCHAIRについて</a></li>
+              <li><a href="#">店舗情報</a></li>
+              <li ><a href="contact.html">よくあるご質問・お問い合わせ</a></li>
+            </ul>
+          </nav>
+      
+
+          <div class="icon">
+            <div class="icon-left">
+              <a href="index.html"><img class="footlogo" src="images/logo-foot.png" alt="TOPページ"></a>
+              <a href="#"><img class="sns" src="images/instagram.png" alt="インスタグラム"></a>
+              <a href="#"><img class="sns" src="images/facebook.png" alt="フェイスブック"></a>
+              <a href="#"><img class="sns" src="images/twitter.png" alt="ツイッター"></a>
+            </div>
+
+            <div class="icon-right">
+              <p class="copy">ブルー、イエロー、モノトーンのイス&ensp;との暮らしを提案する&ensp;&ensp;ララチェアー&ensp;<a href="#"><small>&copy; 2021 LaLaChair</small></a></p>
+            </div>
+          </div>
+
+        </div>
+      </footer>
+
+<!-- トップに戻る -->
+      <div class="gotop">
+        <a href="#"><i class="fas fa-arrow-circle-up fa-2x"></i></a>
+      </div>
+    </div>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal" src="scrollreveal.js"></script>
+    <script>
+    'use strict';
+    ScrollReveal().reveal('.box',{ duration: 1100,viewFactor: 0.4,reset: false });
+    </script>
+
+</body>
+</html>
