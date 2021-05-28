@@ -103,5 +103,12 @@ textarea {
     th {
       font-size: 0.8rem;
     }
-  
+      #form h3 {
+      font-size: 0.6rem;
+    }
+
+    #form table th {
+      font-size: 0.6rem;
+    }
+
 }
