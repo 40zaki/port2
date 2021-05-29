@@ -576,7 +576,7 @@ footer a:hover {
   }
 
   /* トップへ戻るボタン */
-  .gotop {
+  #gotop {
     position: fixed;
     right: 20px;
     bottom: 20px;
