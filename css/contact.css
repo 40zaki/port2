@@ -61,7 +61,7 @@
   text-align: left;
   padding-left: 10px;
   height: 80px;
-  font-size: 1.2vw;
+  font-size: 1rem;
 }
 
 #form td {
@@ -70,7 +70,7 @@
 }
 
 #form h3 {
-  font-size: 1.3vw;
+  font-size: 1rem;
 }
 
 textarea {
@@ -103,12 +103,13 @@ textarea {
     th {
       font-size: 0.8rem;
     }
-      #form h3 {
+
+    #form h3 {
       font-size: 0.6rem;
     }
 
     #form table th {
       font-size: 0.6rem;
     }
-
+  
 }
