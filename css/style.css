@@ -2,9 +2,9 @@
 
 /* 共通部分------------------------------------------------------------- */
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 body {
   font-family: "Hammersmith One", "Sawarabi Gothic", sans-serif;
@@ -334,21 +334,17 @@ footer a:hover {
   
 }
 
-.gotop {
+#gotop {
   position: fixed;
   right: 50px;
-  bottom: 50px;
+  bottom: 40px;
 }
 
-.gotop a {
+#gotop img {
   display: block;
   width: 50px;
-  height: 50px;
-  color: #2c2c2c;
-  text-decoration: none;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 60%;
+  height: 60px;
+  cursor: pointer;
 }
 
 
@@ -512,6 +508,7 @@ footer a:hover {
   .footer {
     width: 100%;
     height: auto;
+    margin-bottom: 0;
   }
 
   .foot-nav {
