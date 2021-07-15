@@ -95,22 +95,24 @@
             </div>
           </div>
 
+        
+
 <!-- ブルー ----------------------------------------------------------------------------------->
           <div id="blue"></div>
           <div class="color-p">
             <h4 class="box">blue</h4>
 
-            <div class="grid">
-              <div class="item3 box">
+            <div class="grid content">
+              <div class="item3 box js-modal-open" data-target="modal01">
                 <a><img src="images/chair3.jpg" alt="ブルーチェア1" /></a>
                 <ul>
-                  <li><a>チェアB0041 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>チェアB0041 &nbsp;<span class="small">【送料無料】</span></li>
                   <li>19,800円 <span class="small">(税込)</span></li>
                   <li><span class="small">在庫 〇</span></li>
                 </ul>
               </div>
 
-              <div class="item3 box">
+              <div class="item3 box js-modal-open" data-target="modal02">
                 <a><img src="images/chair7.jpg" alt="ブルーチェア2" /></a>
                 <ul>
                   <li><a>チェアB0058 &nbsp;<span class="small">【送料無料】</span></a></li>
@@ -118,41 +120,211 @@
                   <li><span class="small">在庫 〇</span></li>
                 </ul>
               </div>
+
+              <div id="modal01" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+                 
+                  <div class="modal_item">
+                    <img src="images/chair3.jpg" alt="ブルーチェア1" />
+                  </div>
+                  <form name="chair" action="" method="post">
+                      <ul class="modal_li">
+                        <li><a class="js-modal-close" href="">×</a></li>
+                        <li>
+                          チェアB0041 &nbsp;<span class="small">【送料無料】</span>
+                        </li>
+                        <li id="priceB0041" value="19800">19,800円</li>
+                        <li><span class="small">在庫 〇</span></li>
+                        <li>
+                          <select id="quantityB0041" onChange="total_calc()">
+                            <option value="0">個数を選択</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </li>
+                       <li>　　</li>
+                       <li>小計　<input type="text" id="subtotalB0041" size="7" value="0"> 円</li>
+                       <li>合計金額　<input type="text" class="total" size="7" value="0"> 円</li>
+                       <!-- <li><button>カートに入れる</button></li> -->
+                      </ul>
+                  </form>
+                </div>
+              </div>
+
+              <div id="modal02" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+
+                  <div class="modal_item">
+                    <img src="images/chair7.jpg" alt="ブルーチェア2" />
+                  </div>
+                    <form name="chair" action="" method="post">
+                      <ul class="modal_li">
+                        <li><a class="js-modal-close" href="">×</a></li>
+                        <li>
+                          チェアB0058 &nbsp;<span class="small">【送料無料】</span>
+                        </li>
+                        <li id="priceB0058" value="8800">8,800円</li>
+                        <li><span class="small">在庫 〇</span></li>
+                        <li>
+                          <select id="quantityB0058" onChange="total_calc()">
+                            <option value="0">個数を選択</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </li>
+                       <li>　　</li>
+                       <li>小計　<input type="text" id="subtotalB0058" size="7" value="0"> 円</li>
+                       <li>合計金額　<input type="text" class="total" size="7" value="0"> 円</li>
+                       <!-- <li><button>カートに入れる</button></li> -->
+                      </ul>
+                    </form>
+                </div>
+              </div>
             </div>
-          </div>
 
 <!-- イエロー　---------------------------------------------------------------------------------->
           <div id="yellow"></div>
           <div class="color-p">
             <h5 class="box">yellow</h5>
 
-            <div class="grid">
-              <div class="item3 box">
+            <div class="grid content">
+              <div class="item3 box js-modal-open" data-target="modal03">
                 <a><img src="images/chair4.jpg" alt="イエローチェア1" /></a>
                 <ul>
-                  <li><a>ソファーY0033</a></li>
+                  <li>ソファーY0033 &nbsp;<span class="small">【大型送料別】</span></li>
                   <li>39,800円 <span class="small">(税込)</span></li>
                   <li><span class="small">在庫 〇</span></li>
                 </ul>
               </div>
 
-              <div class="item3 box">
+              <div class="item3 box js-modal-open" data-target="modal04">
                 <a><img src="images/chair8.jpg" alt="イエローチェア2" /></a>
                 <ul>
-                  <li><a>チェアY0011 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>チェアY0011 &nbsp;<span class="small">【送料無料】</span></li>
                   <li>6,800円 <span class="small">(税込)</span></li>
                   <li><span class="small">在庫 〇</span></li>
                 </ul>
               </div>
 
-              <div class="item3 box">
+              <div class="item3 box js-modal-open" data-target="modal05">
                 <a><img src="images/chair14.jpg" alt="イエローチェア3" /></a>
                 <ul>
-                  <li><a>チェアY0068 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>チェアY0068 &nbsp;<span class="small">【送料無料】</span></li>
                   <li>9,800円 <span class="small">(税込)</span></li>
                   <li><span class="small">在庫 〇</span></li>
                 </ul>
               </div>
+
+              <div id="modal03" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+
+                  <div class="modal_item">
+                    <img src="images/chair4.jpg" alt="イエローチェア1" />
+                  </div>
+                    <form name="chair" action="" method="post">
+                      <ul class="modal_li">
+                        <li><a class="js-modal-close" href="">×</a></li>
+                        <li>
+                          ソファーY0033 &nbsp;<span class="small">【大型送料 別途1000円】</span>
+                        </li>
+                        <li id="priceY0033" value="40800">39,800円</li>
+                        <li><span class="small">在庫 〇</span></li>
+                        <li>
+                          <select id="quantityY0033" onChange="total_calc()">
+                            <option value="0">個数を選択</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </li>
+                       <li>　　</li>
+                       <li>小計　<input type="text" id="subtotalY0033" size="7" value="0"> 円</li>
+                       <li>合計金額　<input type="text" class="total" size="7" value="0"> 円</li>
+                       <!-- <li><button>カートに入れる</button></li> -->
+                      </ul>
+                    </form>
+                </div>
+              </div>
+
+              <div id="modal04" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+
+                  <div class="modal_item">
+                    <img src="images/chair8.jpg" alt="イエローチェア2" />
+                  </div>
+                    <form name="chair" action="" method="post">
+                      <ul class="modal_li">
+                        <li><a class="js-modal-close" href="">×</a></li>
+                        <li>
+                          ソファーY0011 &nbsp;<span class="small">【送料無料】</span>
+                        </li>
+                        <li id="priceY0011" value="6800">6,800円</li>
+                        <li><span class="small">在庫 〇</span></li>
+                        <li>
+                          <select id="quantityY0011" onChange="total_calc()">
+                            <option value="0">個数を選択</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </li>
+                       <li>　　</li>
+                       <li>小計　<input type="text" id="subtotalY0011" size="7" value="0"> 円</li>
+                       <li>合計金額　<input type="text" class="total" size="7" value="0"> 円</li>
+                       <!-- <li><button>カートに入れる</button></li> -->
+                      </ul>
+                    </form>
+                </div>
+              </div>
+
+              <div id="modal05" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+
+                  <div class="modal_item">
+                    <img src="images/chair14.jpg" alt="イエローチェア3" />
+                  </div>
+                    <form name="chair" action="" method="post">
+                      <ul class="modal_li">
+                        <li><a class="js-modal-close" href="">×</a></li>
+                        <li>
+                          ソファーY0068 &nbsp;<span class="small">【送料無料】</span>
+                        </li>
+                        <li id="priceY0068" value="9800">9,800円</li>
+                        <li><span class="small">在庫 〇</span></li>
+                        <li>
+                          <select id="quantityY0068" onChange="total_calc()">
+                            <option value="0">個数を選択</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </li>
+                       <li>　　</li>
+                       <li>小計　<input type="text" id="subtotalY0068" size="7" value="0"> 円</li>
+                       <li>合計金額　<input type="text" class="total" size="7" value="0"> 円</li>
+                       <!-- <li><button>カートに入れる</button></li> -->
+                      </ul>
+                    </form>
+                </div>
+              </div>
+
             </div>
           </div>
         
@@ -162,61 +334,267 @@
           <div class="color-p">
             <h6 class="box">white</h6>
 
-            <div class="grid">
+            <div class="grid content">
 
-              <div class="item3 box">
+              <div class="item3 box js-modal-open" data-target="modal06">
                 <a><img src="images/chair1.jpg" alt="ホワイトチェア1" /></a>
                 <ul>
-                  <li><a>チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
-                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><a>チェアW0041 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>9,800円 <span class="small">(税込)</span></li>
                   <li><span class="small">在庫 〇</span>></li>
                 </ul>
               </div>
 
-              <div class="item3 box">
+              <div class="item3 box js-modal-open" data-target="modal07">
                 <a><img src="images/chair9.jpg" alt="ホワイトチェア2" /></a>
                 <ul>
-                  <li><a>チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
-                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><a>チェアW0077 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>12,800円 <span class="small">(税込)</span></li>
                   <li><span class="small">在庫 〇</span></li>
                 </ul>
               </div>
 
-              <div class="item3 box">
+              <div class="item3 box js-modal-open" data-target="modal08">
                 <a><img src="images/chair10.jpg" alt="ホワイトチェア3" /></a>
                 <ul>
-                  <li><a>チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
-                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><a>チェアW0016 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>14,800円 <span class="small">(税込)</span></li>
                   <li><span class="small">在庫 〇</span></li>
                 </ul>
               </div>
 
-              <div class="item3 box">
+              <div class="item3 box js-modal-open" data-target="modal09">
                 <a><img src="images/chair12.jpg" alt="ホワイトチェア4" /></a>
                 <ul>
-                  <li><a>チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
-                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><a>チェアW0052 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>16,800円 <span class="small">(税込)</span></li>
                   <li><span class="small">在庫 〇</span></li>
                 </ul>
               </div>
 
-              <div class="item3 box">
+              <div class="item3 box js-modal-open" data-target="modal10">
                 <a><img src="images/chair13.jpg" alt="ホワイトチェア5" /></a>
                 <ul>
-                  <li><a>チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li><a>ソファーW0082 &nbsp;<span class="small">【送料無料】</span></a></li>
                   <li>19,800円 <span class="small">(税込)</span></li>
                   <li><span class="small">在庫 〇</span></li>
                 </ul>
               </div>
 
-              <div class="item3 box">
+              <div class="item3 box js-modal-open" data-target="modal11">
                 <a><img src="images/chair15.jpg" alt="ホワイトチェア6" /></a>
                 <ul>
-                  <li><a>チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
-                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><a>チェアW0095 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>9,800円 <span class="small">(税込)</span></li>
                   <li><span class="small">在庫 〇</span></li>
                 </ul>
               </div>
+
+
+              <div id="modal06" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+
+                  <div class="modal_item">
+                    <img src="images/chair1.jpg" alt="ホワイトチェア1" />
+                  </div>
+                    <form name="chair" action="" method="post">
+                      <ul class="modal_li">
+                        <li><a class="js-modal-close" href="">×</a></li>
+                        <li>
+                          ソファーW0041 &nbsp;<span class="small">【送料無料】</span>
+                        </li>
+                        <li id="priceW0041" value="9800">9,800円</li>
+                        <li><span class="small">在庫 〇</span></li>
+                        <li>
+                          <select id="quantityW0041" onChange="total_calc()">
+                            <option value="0">個数を選択</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </li>
+                       <li>　　</li>
+                       <li>小計　<input type="text" id="subtotalW0041" size="7" value="0"> 円</li>
+                       <li>合計金額　<input type="text" class="total" size="7" value="0"> 円</li>
+                       <!-- <li><button>カートに入れる</button></li> -->
+                      </ul>
+                    </form>
+                </div>
+              </div>
+
+              <div id="modal07" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+
+                  <div class="modal_item">
+                    <img src="images/chair9.jpg" alt="ホワイトチェア2" />
+                  </div>
+                    <form name="chair" action="" method="post">
+                      <ul class="modal_li">
+                        <li><a class="js-modal-close" href="">×</a></li>
+                        <li>
+                          ソファーW0077 &nbsp;<span class="small">【送料無料】</span>
+                        </li>
+                        <li id="priceW0077" value="12800">12,800円</li>
+                        <li><span class="small">在庫 〇</span></li>
+                        <li>
+                          <select id="quantityW0077" onChange="total_calc()">
+                            <option value="0">個数を選択</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </li>
+                       <li>　　</li>
+                       <li>小計　<input type="text" id="subtotalW0077" size="7" value="0"> 円</li>
+                       <li>合計金額　<input type="text" class="total" size="7" value="0"> 円</li>
+                       <!-- <li><button>カートに入れる</button></li> -->
+                      </ul>
+                    </form>
+                </div>
+              </div>
+
+              <div id="modal08" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+
+                  <div class="modal_item">
+                    <img src="images/chair10.jpg" alt="ホワイトチェア3" />
+                  </div>
+                    <form name="chair" action="" method="post">
+                      <ul class="modal_li">
+                        <li><a class="js-modal-close" href="">×</a></li>
+                        <li>
+                          ソファーW0016 &nbsp;<span class="small">【送料無料】</span>
+                        </li>
+                        <li id="priceW0016" value="14800">14,800円</li>
+                        <li><span class="small">在庫 〇</span></li>
+                        <li>
+                          <select id="quantityW0016" onChange="total_calc()">
+                            <option value="0">個数を選択</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </li>
+                       <li>　　</li>
+                       <li>小計　<input type="text" id="subtotalW0016" size="7" value="0"> 円</li>
+                       <li>合計金額　<input type="text" class="total" size="7" value="0"> 円</li>
+                       <!-- <li><button>カートに入れる</button></li> -->
+                      </ul>
+                    </form>
+                </div>
+              </div>
+
+              <div id="modal09" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+
+                  <div class="modal_item">
+                    <img src="images/chair12.jpg" alt="ホワイトチェア4" />
+                  </div>
+                    <form name="chair" action="" method="post">
+                      <ul class="modal_li">
+                        <li><a class="js-modal-close" href="">×</a></li>
+                        <li>
+                          ソファーW0052 &nbsp;<span class="small">【送料無料】</span>
+                        </li>
+                        <li id="priceW0052" value="16800">16,800円</li>
+                        <li><span class="small">在庫 〇</span></li>
+                        <li>
+                          <select id="quantityW0052" onChange="total_calc()">
+                            <option value="0">個数を選択</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </li>
+                       <li>　　</li>
+                       <li>小計　<input type="text" id="subtotalW0052" size="7" value="0"> 円</li>
+                       <li>合計金額　<input type="text" class="total" size="7" value="0"> 円</li>
+                       <!-- <li><button>カートに入れる</button></li> -->
+                      </ul>
+                    </form>
+                </div>
+              </div>
+
+              <div id="modal10" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+
+                  <div class="modal_item">
+                    <img src="images/chair13.jpg" alt="ホワイトチェア5" />
+                  </div>
+                    <form name="chair" action="" method="post">
+                      <ul class="modal_li">
+                        <li><a class="js-modal-close" href="">×</a></li>
+                        <li>
+                          ソファーW0082 &nbsp;<span class="small">【送料無料】</span>
+                        </li>
+                        <li id="priceW0082" value="19800">19,800円</li>
+                        <li><span class="small">在庫 〇</span></li>
+                        <li>
+                          <select id="quantityW0082" onChange="total_calc()">
+                            <option value="0">個数を選択</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </li>
+                       <li>　　</li>
+                       <li>小計　<input type="text" id="subtotalW0082" size="7" value="0"> 円</li>
+                       <li>合計金額　<input type="text" class="total" size="7" value="0"> 円</li>
+                       <!-- <li><button>カートに入れる</button></li> -->
+                      </ul>
+                    </form>
+                </div>
+              </div>
+
+              <div id="modal11" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+
+                  <div class="modal_item">
+                    <img src="images/chair15.jpg" alt="ホワイトチェア6" />
+                  </div>
+                    <form name="chair" action="" method="post">
+                      <ul class="modal_li">
+                        <li><a class="js-modal-close" href="">×</a></li>
+                        <li>
+                          ソファーW0095 &nbsp;<span class="small">【送料無料】</span>
+                        </li>
+                        <li id="priceW0095" value="9800">9,800円</li>
+                        <li><span class="small">在庫 〇</span></li>
+                        <li>
+                          <select id="quantityW0095" onChange="total_calc()">
+                            <option value="0">個数を選択</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </li>
+                       <li>　　</li>
+                       <li>小計　<input type="text" id="subtotalW0095" size="7" value="0"> 円</li>
+                       <li>合計金額　<input type="text" class="total" size="7" value="0"> 円</li>
+                       <!-- <li><button>カートに入れる</button></li> -->
+                      </ul>
+                    </form>
+                </div>
+              </div>
+
             </div>
           </div>
           
@@ -226,34 +604,139 @@
           <div class="color-p">
             <h6 class="box">black</h6>
 
-            <div class="grid">
+            <div class="grid content">
   
-              <div class="item3 box">
+              <div class="item3 box js-modal-open" data-target="modal12">
                 <a><img src="images/chair5n.jpg" alt="ブラックチェア1" /></a>
                 <ul>
-                  <li><a>チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li><a>ソファーBK0010 &nbsp;<span class="small">【送料無料】</span></a></li>
                   <li>19,800円 <span class="small">(税込)</span></li>
                   <li><span class="small">在庫 〇</span></li>
                 </ul>
               </div>
   
-              <div class="item3 box">
+              <div class="item3 box js-modal-open" data-target="modal13">
                 <a><img src="images/chair6.jpg" alt="ブラックチェア2" /></a>
                 <ul>
-                  <li><a>チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
-                  <li>19,800円 <span class="small">(税込)</span></li>
+                  <li><a>チェアBK0023 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>7,800円 <span class="small">(税込)</span></li>
                   <li><span class="small">在庫 〇</span></li>
                 </ul>
               </div>
   
-              <div class="item3 box">
+              <div class="item3 box js-modal-open" data-target="modal14">
                 <a><img src="images/chair11.jpg" alt="ブラックチェア3" /></a>
                 <ul>
-                  <li><a>チェアW041 &nbsp;<span class="small">【送料無料】</span></a></li>
-                  <li>19,800円<span class="small">(税込)</span></li>
+                  <li><a>チェアBK0024 &nbsp;<span class="small">【送料無料】</span></a></li>
+                  <li>7,800円<span class="small">(税込)</span></li>
                   <li><span class="small">在庫 〇</span></li>
                 </ul>
               </div>
+
+
+              <div id="modal12" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+
+                  <div class="modal_item">
+                    <img src="images/chair5n.jpg" alt="ブラックチェア1" />
+                  </div>
+                    <form name="chair" action="" method="post">
+                      <ul class="modal_li">
+                        <li><a class="js-modal-close" href="">×</a></li>
+                        <li>
+                          ソファーBK0010 &nbsp;<span class="small">【送料無料】</span>
+                        </li>
+                        <li id="priceBK0010" value="19800">19,800円</li>
+                        <li><span class="small">在庫 〇</span></li>
+                        <li>
+                          <select id="quantityBK0010" onChange="total_calc()">
+                            <option value="0">個数を選択</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </li>
+                       <li>　　</li>
+                       <li>小計　<input type="text" id="subtotalBK0010" size="7" value="0"> 円</li>
+                       <li>合計金額　<input type="text" class="total" size="7" value="0"> 円</li>
+                       <!-- <li><button>カートに入れる</button></li> -->
+                      </ul>
+                    </form>
+                </div>
+              </div>
+
+              <div id="modal13" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+
+                  <div class="modal_item">
+                    <img src="images/chair6.jpg" alt="ブラックチェア2" />
+                  </div>
+                    <form name="chair" action="" method="post">
+                      <ul class="modal_li">
+                        <li><a class="js-modal-close" href="">×</a></li>
+                        <li>
+                          ソファーBK0023 &nbsp;<span class="small">【送料無料】</span>
+                        </li>
+                        <li id="priceBK0023" value="7800">7,800円</li>
+                        <li><span class="small">在庫 〇</span></li>
+                        <li>
+                          <select id="quantityBK0023" onChange="total_calc()">
+                            <option value="0">個数を選択</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </li>
+                       <li>　　</li>
+                       <li>小計　<input type="text" id="subtotalBK0023" size="7" value="0"> 円</li>
+                       <li>合計金額　<input type="text" class="total" size="7" value="0"> 円</li>
+                       <!-- <li><button>カートに入れる</button></li> -->
+                      </ul>
+                    </form>
+                </div>
+              </div>
+
+              <div id="modal14" class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+
+                  <div class="modal_item">
+                    <img src="images/chair11.jpg" alt="ブラックチェア3" />
+                  </div>
+                    <form name="chair" action="" method="post">
+                      <ul class="modal_li">
+                        <li><a class="js-modal-close" href="">×</a></li>
+                        <li>
+                          ソファーBK0024 &nbsp;<span class="small">【送料無料】</span>
+                        </li>
+                        <li id="priceBK0024" value="7800">7,800円</li>
+                        <li><span class="small">在庫 〇</span></li>
+                        <li>
+                          <select id="quantityBK0024" onChange="total_calc()">
+                            <option value="0">個数を選択</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </li>
+                       <li>　　</li>
+                       <li>小計　<input type="text" id="subtotalBK0024" size="7" value="0"> 円</li>
+                       <li>合計金額　<input type="text" class="total" size="7" value="0"> 円</li>
+                       <!-- <li><button>カートに入れる</button></li> -->
+                      </ul>
+                    </form>
+                </div>
+              </div>
+
+
             </div>
           </div>
       </main>
@@ -297,6 +780,10 @@
 
     <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal" src="scrollreveal.js"></script>
+
+    <!-- モーダルウィンドウ・金額計算 -->
+    <script src="js/products.js"></script>
+
     <script>
     'use strict';
     ScrollReveal().reveal('.box',{ duration: 800,viewFactor: 0.2,reset: false });
@@ -319,7 +806,7 @@
        return false;
     });
     });
-    </script>
 
+    </script>
 </body>
 </html>

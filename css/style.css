@@ -44,6 +44,11 @@ a {
   width: 300px;
 }
 
+/* img{
+  max-width: 100%;
+  vertical-align: bottom;
+} */
+
 /* グローバルナビゲーション　--------------------- */
 .main-nav {
   display: flex;
@@ -233,6 +238,10 @@ h2 {
   width: 90%;
   height: auto;
   margin: 120px auto 0 auto;
+}
+
+#cont-ranking .common .item p{
+  font-size: smaller;
 }
 
 /* フッター---------------------------------------------*/

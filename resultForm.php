@@ -33,7 +33,7 @@
 
     <!-- アイコン -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="icon" type="../image/png" href="../images/favicon.png" />
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -83,111 +83,17 @@
 
       <!-- メインエリア------------------------------------------------- -->
       <main>
-        <div id="contact">
-          <div id="faq">
-            <h2>よくあるご質問</h2>
-
-            <p class="question">Q：注文後、商品はどのくらいで到着しますか？</p>
-
-            <ul>
-              <li>
-                A：配送先地域により到着日数は異なりますが、商品受注後、1～3日で発送致します。
-              </li>
-            </ul>
-
-            <p class="question">Q：在庫切れ商品はもう買えないのですか？</p>
-
-            <ul>
-              <li>A：在庫切れ商品は再度販売する場合もございます。</li>
-              <li>
-                再入荷があった場合は、随時サイト上で商品を販売いたしますので商品ページをご確認ください。
-              </li>
-            </ul>
-
-            <p class="question">Q：注文確認メールが届きません。</p>
-            <ul>
-              <li>
-                A：ご注文が確定出来ていなかったり、ご注文時のメールアドレスが間違っている等の可能性がございます。
-              </li>
-              <li>その他、迷惑メール等のメール受信設定をご確認ください。</li>
-            </ul>
-          </div>
+          <div id="contact">
 
           <div id="form">
-            <h2>お問い合わせ</h2>
+            <h2>お問い合わせ完了</h2>
             <p>
-              以下のお問合せ項目を入力し、「入力内容を確認する」ボタンを押してください。<br />
-              <css style="color: red">[必須]</css>
-              は必須項目です。必ず入力してください。
+              送信しました。<br>
+              お問い合わせありがとうございました。
             </p>
-
-            <!--  お問い合わせフォーム　------------------------------------------>
-            <form method="post" action="confForm.php">
-              <table>
-                <tr>
-                  <th>
-                    <h3>件名（タイトル）</h3>
-                  </th>
-                  <td>
-                    <select name="title">
-                      <option value="ご注文に関するお問い合わせ">ご注文に関するお問い合わせ</option>
-                      <option value="予約ご希望のご連絡">予約ご希望のご連絡</option>
-                      <option value="納期・お届けに関するお問い合わせ">納期・お届けに関するお問い合わせ</option>
-                      <option value="その他のお問い合わせ">その他のお問い合わせ</option>
-                    </select>
-                  </td>
-                </tr>
-
-                <tr>
-                  <th>
-                    <label for="shimei">お名前
-                      <css style="color: red; font-size: 0.6rem">[必須]</css>
-                    </label>
-                  </th>
-                  <td>
-                    <input type="text" name="name" id="shimei" placeholder="入力例：大阪　太郎" required/>
-                  </td>
-                </tr>
-
-                <tr>
-                  <th>
-                    <label for="phone">電話番号
-                      <css style="color: red; font-size: 0.6rem">[必須]</css>
-                    </label>
-                  </th>
-                  <td>
-                    <input type="tel" name="phone" id="phone" required />
-                  </td>
-                </tr>
-
-                <tr>
-                  <th>
-                    <label for="mail">メールアドレス
-                      <css style="color: red; font-size: 0.6rem">[必須]</css>
-                    </label>
-                  </th>
-                  <td>
-                    <input type="email" name="email" id="mail" required />
-                  </td>
-                </tr>
-
-                <tr>
-                  <th>
-                    お問合わせ内容
-                    <css style="color: red; font-size: 0.6rem">[必須]</css>
-                  </th>
-                  <td>
-                    <textarea name="text" required></textarea>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td colspan="2" id="colospan">
-                    <input type="submit" name="submitted" value="入力内容を確認する" />
-                  </td>
-                </tr>
-              </table>
-            </form>
+            <p id="back">
+                <a href="index.html">LaLaChair TOP</a>
+            </p>
           </div>
         </div>
       </main>

@@ -68,6 +68,66 @@
   margin: 0 auto;
 }
 
+/* モーダルウィンドウ------------------------- */
+.content{
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.modal__bg{
+  background: rgba(0,0,0,0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+
+.modal__content{
+  background: #fff;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-40%);
+  width: 50%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal_item{
+  width: 50%;
+  height: auto;
+}
+
+.modal_li{
+  text-align: right;
+  width: 100%;
+  height: auto;
+  list-style-type: none;
+}
+
+.modal_li li{
+  line-height: 30px;
+}
+
+#total{
+  direction: rtl;
+}
+
+/* .modal_li li button{
+  width: 60%;
+} */
+
+
 /* ブルー */
 #product h4 {
   width: 100%;
@@ -90,6 +150,7 @@
 
 .item3 {
   margin: 30px auto 0 auto;
+  cursor: pointer;
 }
 
 .item3 li {
@@ -120,6 +181,7 @@
 }
 
 
+
 /* レスポンシブ-----------------------------------------------------------
 ------------------------------------------------------------------------- */
 @media (max-width: 900px) {
@@ -128,3 +190,4 @@
     margin: 70px auto 0 auto;
   }
 
+}

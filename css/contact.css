@@ -72,6 +72,15 @@
 #form h3 {
   font-size: 1rem;
 }
+/* #form #back {
+  font-size: 1rem;
+} */
+
+#form a {
+  color: #fadf00;
+  font-size: 1.2rem;
+  /* border-bottom: 1px solid #2c2c2c; */
+}
 
 textarea {
   width: 90%;

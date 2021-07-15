@@ -33,7 +33,7 @@
 
     <!-- アイコン -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="icon" type="../image/png" href="../images/favicon.png" />
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -81,109 +81,187 @@
         </div>
       </header>
 
+<!-- 
+      <?php
+
+        require_once("lib/util.php");
+
+        // HTMLエスケープ
+        $_POST = es($_POST);
+
+        // POSTされたデータを変数に格納
+        $title = $_POST["title"];
+        $name = $_POST["name"];
+        $phone = $_POST["phone"];
+        $email = $_POST["email"];
+        $text = $_POST["text"];
+
+        // データの整形
+        $name = trim($name);
+        $phone = trim($phone);
+        $email = trim($email);
+        $text = trim($text);
+
+
+        if(isset($_POST['submitted'])){
+          //POSTされたデータをチェック  
+          $_POST = checkInput( $_POST ); 
+
+          //エラーメッセージを保存する配列の初期化
+          $error =  array();
+
+          if($name == ''){
+            $error['name'] = "お名前は必須項目です";
+          } else if(preg_match('/\A[[:^cntrl:]]{1,30}\z/u',$name) == 0){
+            $error['name'] = "お名前は３０文字以内でお願いします";
+          }
+
+          if ( preg_match( '/\A[[:^cntrl:]]{0,30}\z/u', $phone ) == 0 ) {
+            $error['phone'] = '*電話番号は30文字以内でお願いします。';
+          }
+          if ( $phone != '' && preg_match( '/\A\(?\d{2,5}\)?[-(\.\s]{0,2}\d{1,4}[-)\.\s]{0,2}\d{3,4}\z/u', $phone ) == 0 ) {
+            $error['phone_format'] = '*電話番号の形式が正しくありません。';
+          }
+
+          if($email == ''){
+            $error['email'] = "メールアドレスは必須項目です";
+          } else{
+            $pattern = '/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/uiD';
+            if ( !preg_match($pattern, $email) ) {
+            $error['email'] = "メールアドレスの形式が正しくありません";
+            }
+          }
+          
+          if ( $text == '' ) {
+            $error['text'] = '*お問い合わせ内容は必須項目です';
+            //制御文字（タブ、復帰、改行を除く）でないことと文字数をチェック
+          } else if ( preg_match( '/\A[\r\n\t[:^cntrl:]]{1,1050}\z/u', $text ) == 0 ) {
+            $error['text'] = '*内容は1000文字以内でお願いします';
+          }
+
+          if(empty($error) && $_SERVER['REQUEST_METHOD']==='POST'){
+            // メールアドレス等を記述したファイルの読み込み
+            require_once('lib/mailvars.php');
+
+            // メール本文の組立
+
+            $mail_body = 'HPのお問い合わせフォームからの連絡'."/n/n";
+            $mail_body .=  "お名前： ".es($name)."\n";
+            $mail_body .=  "Email： ".es($email)."\n";
+            $mail_body .=  "お電話番号： ".es($phone)."\n\n";
+            $mail_body .=  "＜お問い合わせ内容＞"."\n".es($text);
+          }
+
+            //--------sendmail------------
+ 
+            // メールの宛先（名前<メールアドレス> の形式）。値は mailvars.php に記載
+            $mailTo = mb_encode_mimeheader(MAIL_TO_NAME) ."<" . MAIL_TO. ">";
+        
+            //Return-Pathに指定するメールアドレス
+            $returnMail = MAIL_RETURN_PATH; //
+            //mbstringの日本語設定
+            mb_language( 'ja' );
+            mb_internal_encoding( 'UTF-8' );
+        
+            // 送信者情報（From ヘッダー）の設定
+            $header = "From: " . mb_encode_mimeheader($name) ."<" . $email. ">\n";
+            $header .= "Cc: " . mb_encode_mimeheader(MAIL_CC_NAME) ."<" . MAIL_CC.">\n";
+            // $header .= "Bcc: <" . MAIL_BCC.">";
+        
+            //メールの送信
+            //セーフモードがOnの場合は第5引数が使えない
+            if ( ini_get( 'safe_mode' ) ) {
+              $result = mb_send_mail( $mailTo, $subject, $mail_body, $header );
+            } else {
+              $result = mb_send_mail( $mailTo, $subject, $mail_body, $header, '-f' . $returnMail );
+            }
+            
+            //メール送信の結果判定
+            if ( $result ) {
+              $_POST = array(); //空の配列を代入し、すべてのPOST変数を消去
+              //変数の値も初期化
+              $name = '';
+              $email = '';
+              $email_check = '';
+              $phone = '';
+              $title = '';
+              $text = '';
+              
+              //再読み込みによる二重送信の防止
+              $params = '?result='. $result;
+              //サーバー変数 $_SERVER['HTTPS'] が取得出来ない環境用
+              if(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) and $_SERVER['HTTP_X_FORWARDED_PROTO'] === "https") {
+                $_SERVER['HTTPS'] = 'on';
+              }
+              $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME']; 
+              header('Location:' . $url . $params);
+              exit; 
+      }
+    }
+    ?>
+-->
+
       <!-- メインエリア------------------------------------------------- -->
       <main>
-        <div id="contact">
-          <div id="faq">
-            <h2>よくあるご質問</h2>
-
-            <p class="question">Q：注文後、商品はどのくらいで到着しますか？</p>
-
-            <ul>
-              <li>
-                A：配送先地域により到着日数は異なりますが、商品受注後、1～3日で発送致します。
-              </li>
-            </ul>
-
-            <p class="question">Q：在庫切れ商品はもう買えないのですか？</p>
-
-            <ul>
-              <li>A：在庫切れ商品は再度販売する場合もございます。</li>
-              <li>
-                再入荷があった場合は、随時サイト上で商品を販売いたしますので商品ページをご確認ください。
-              </li>
-            </ul>
-
-            <p class="question">Q：注文確認メールが届きません。</p>
-            <ul>
-              <li>
-                A：ご注文が確定出来ていなかったり、ご注文時のメールアドレスが間違っている等の可能性がございます。
-              </li>
-              <li>その他、迷惑メール等のメール受信設定をご確認ください。</li>
-            </ul>
-          </div>
+          <div id="contact">
 
           <div id="form">
-            <h2>お問い合わせ</h2>
+            <h2>お問い合わせ内容の確認</h2>
             <p>
-              以下のお問合せ項目を入力し、「入力内容を確認する」ボタンを押してください。<br />
-              <css style="color: red">[必須]</css>
-              は必須項目です。必ず入力してください。
+              以下のお問合せ内容を確認し、「送信する」ボタンを押してください。
             </p>
 
             <!--  お問い合わせフォーム　------------------------------------------>
-            <form method="post" action="confForm.php">
+            <form method="post" action="resultForm.php">
               <table>
                 <tr>
                   <th>
                     <h3>件名（タイトル）</h3>
                   </th>
                   <td>
-                    <select name="title">
-                      <option value="ご注文に関するお問い合わせ">ご注文に関するお問い合わせ</option>
-                      <option value="予約ご希望のご連絡">予約ご希望のご連絡</option>
-                      <option value="納期・お届けに関するお問い合わせ">納期・お届けに関するお問い合わせ</option>
-                      <option value="その他のお問い合わせ">その他のお問い合わせ</option>
-                    </select>
+                    <?php echo $title; ?>
                   </td>
                 </tr>
 
                 <tr>
                   <th>
-                    <label for="shimei">お名前
-                      <css style="color: red; font-size: 0.6rem">[必須]</css>
-                    </label>
+                    お名前
                   </th>
                   <td>
-                    <input type="text" name="name" id="shimei" placeholder="入力例：大阪　太郎" required/>
+                    <?php echo $name; ?>
                   </td>
                 </tr>
 
                 <tr>
                   <th>
-                    <label for="phone">電話番号
-                      <css style="color: red; font-size: 0.6rem">[必須]</css>
-                    </label>
+                    電話番号
                   </th>
                   <td>
-                    <input type="tel" name="phone" id="phone" required />
+                    <?php echo $phone; ?>
                   </td>
                 </tr>
 
                 <tr>
                   <th>
-                    <label for="mail">メールアドレス
-                      <css style="color: red; font-size: 0.6rem">[必須]</css>
-                    </label>
+                    メールアドレス
                   </th>
                   <td>
-                    <input type="email" name="email" id="mail" required />
+                    <?php echo $email; ?>
                   </td>
                 </tr>
 
                 <tr>
                   <th>
                     お問合わせ内容
-                    <css style="color: red; font-size: 0.6rem">[必須]</css>
                   </th>
                   <td>
-                    <textarea name="text" required></textarea>
+                    <?php echo $text; ?>
                   </td>
                 </tr>
 
                 <tr>
                   <td colspan="2" id="colospan">
-                    <input type="submit" name="submitted" value="入力内容を確認する" />
+                    <input type="submit" value="送信する" />
                   </td>
                 </tr>
               </table>
