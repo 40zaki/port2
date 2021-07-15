@@ -123,10 +123,6 @@
   direction: rtl;
 }
 
-/* .modal_li li button{
-  width: 60%;
-} */
-
 
 /* ブルー */
 #product h4 {
@@ -189,5 +185,24 @@
   #product {
     margin: 70px auto 0 auto;
   }
+
+  .modal__content{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    font-size: 0.9rem;
+  }
+
+  .modal_item{
+    width: 100%;
+    height: auto;
+  }
+
+  .modal__content form{
+    width: 100%;
+    height: auto;
+  }
+  
+
 
 }
